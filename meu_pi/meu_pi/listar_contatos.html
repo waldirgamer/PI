@@ -1,0 +1,7 @@
+<h1>Lista de Contatos</h1>
+<ul>
+    {% for contato in contatos %}
+        <li>{{ contato.nome }} - <a href="{% url 'atualizar_contato' contato.id %}">Atualizar</a> | <a href="{% url 'excluir_contato' contato.id %}">Excluir</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'criar_contato' %}">Criar Novo Contato</a>
